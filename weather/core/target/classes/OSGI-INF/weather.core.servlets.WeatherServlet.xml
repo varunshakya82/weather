@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="weather.core.servlets.WeatherServlet">
+        <implementation class="weather.core.servlets.WeatherServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/aviva/weather
+        </property>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="weather.core.servlets.WeatherServlet"/>
+        <reference name="weatherInfo" interface="weather.core.services.WeatherInfo" cardinality="1..1" policy="static" bind="bindWeatherInfo" unbind="unbindWeatherInfo"/>
+    </scr:component>
+</components>

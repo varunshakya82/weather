@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/weather.core.services.impl.WeatherServiceImpl">
+    <OCD id="weather.core.services.impl.WeatherServiceImpl" name="%weather.core.services.impl.WeatherServiceImpl.name" description="%weather.core.services.impl.WeatherServiceImpl.description"/>
+    <Designate pid="weather.core.services.impl.WeatherServiceImpl">
+        <Object ocdref="weather.core.services.impl.WeatherServiceImpl"/>
+    </Designate>
+</metatype:MetaData>

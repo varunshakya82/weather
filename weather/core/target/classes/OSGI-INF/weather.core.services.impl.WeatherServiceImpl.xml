@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="false" name="weather.core.services.impl.WeatherServiceImpl" activate="activate">
+        <implementation class="weather.core.services.impl.WeatherServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="weather.core.services.WeatherInfo"/>
+        </service>
+        <property name="Weather.vendor" value="Weather"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="weather.core.services.impl.WeatherServiceImpl"/>
+    </scr:component>
+</components>

@@ -1,0 +1,31 @@
+
+<table style="width: 100%" id="weatherDetails"
+	data-sly-use.weatherTitles="weather.core.models.WeatherInformationModel">
+	<tr>
+		<th>
+			<p data-sly-test="${weatherTitles.city == null}">Enter the city</p>
+			<p data-sly-test="${weatherTitles.city != null}">${weatherTitles.city}</p>
+		</th>
+		<th><input type="text" name="cityName" id="cName"></th>
+	</tr>
+	<tr>
+		<th>
+			<p data-sly-test="${weatherTitles.weatherInfo == null}">
+				<a id="getDetails" href="#weatherDetails">Get Weather Details</a>
+			</p>
+			<p data-sly-test="${weatherTitles.weatherInfo != null}">
+				<a id="getDetails" href="#weatherDetails">${weatherTitles.weatherInfo}</a>
+			</p>
+		</th>
+		<th>
+			<p id="Wdetails1"></p>
+			<br>
+			<p id="Wdetails2"></p>
+		</th>
+	</tr>
+</table>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='weatherInfo.weather'}" />
+
+
+
