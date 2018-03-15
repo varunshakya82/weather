@@ -1,5 +1,6 @@
 package weather.core.models;
 
+
 import javax.inject.Inject;
 
 import org.apache.sling.api.resource.Resource;
@@ -24,7 +25,7 @@ public class WeatherInformationModel {
 	private String city;
 
 	public String getWeatherInfo() {
-		return weatherInfo;
+		return weatherInfo+"************";
 	}
 	
 	public String getCity() {
